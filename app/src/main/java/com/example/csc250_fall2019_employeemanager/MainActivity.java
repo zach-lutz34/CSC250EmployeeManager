@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) //this gets called automatically when a result was provided by the another screen
     {
         String employeeName = data.getStringExtra("employee_name");
-        Toast.makeText(this, "Received result: " + employeeName + "", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Received result: " + employeeName + "" + Core.theEmployees.size(), Toast.LENGTH_LONG).show();
     }
 
     public void onEmployeeListClick(View v)
